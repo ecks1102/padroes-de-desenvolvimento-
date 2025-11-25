@@ -91,6 +91,7 @@ Ele oferece uma forma eficiente de duplicar objetos sem reconstruí-los.
 Porém, deve ser aplicado com atenção quando a clonagem envolve estruturas complexas ou sensíveis.
 
 🔀 Resumo rápido
+
 Sem Prototype
 
 Código repetitivo
@@ -100,6 +101,7 @@ Baixa reutilização
 Alto acoplamento
 
 Criação manual e lenta
+
 
 Com Prototype
 
