@@ -1,0 +1,20 @@
+class Circle:
+    def __init__(self, x: int, y: int, radius: int, color: str):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+
+    def __repr__(self):
+        return f"Circle(x={self.x}, y={self.y}, radius={self.radius}, color='{self.color}')"
+
+
+# Uso tradicional
+if __name__ == "__main__":
+    c1 = Circle(10, 20, 15, "red")
+
+    # Para criar um novo círculo igual, precisamos repetir:
+    c2 = Circle(10, 20, 15, "red")
+
+    print(c1)
+    print(c2)
