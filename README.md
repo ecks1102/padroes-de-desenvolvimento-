@@ -32,6 +32,7 @@ Configuração repetida	Sim	Não
 Objetos complexos	Difícil	Eficiente
 Desempenho	Simples	Rápido ao copiar
 Extensibilidade	Baixa	Alta
+
 3️⃣ Quando usar Prototype?
 🧩 Cenários ideais
 
