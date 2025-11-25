@@ -1,0 +1,41 @@
+import copy
+
+class Shape:
+    def __init__(self, x: int = 0, y: int = 0, color: str = ""):
+        self.x = x
+        self.y = y
+        self.color = color
+
+    def clone(self):
+        """Método que será sobrescrito nas subclasses."""
+        raise NotImplementedError
+
+    def __repr__(self):
+        return f"Shape(x={self.x}, y={self.y}, color='{self.color}')"
+
+
+class Circle(Shape):
+    def __init__(self, x: int, y: int, radius: int, color: str):
+        super().__init__(x, y, color)
+        self.radius = radius
+
+    def clone(self):
+        # Retorna uma cópia profunda de si mesmo
+        return copy.deepcopy(self)
+
+    def __repr__(self):
+        return f"Circle(x={self.x}, y={self.y}, radius={self.radius}, color='{self.color}')"
+
+
+# Uso com o padrão Prototype
+if __name__ == "__main__":
+    c1 = Circle(10, 20, 15, "red")
+
+    # Agora basta clonar
+    c2 = c1.clone()
+
+    print("Original:", c1)
+    print("Clone:   ", c2)
+
+    print("São objetos diferentes?", c1 is not c2)
+    print("Conteúdo igual?", c1.__dict__ == c2.__dict__)
